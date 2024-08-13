@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EventLitez</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>EventLitez</h1>
+	<!-- Event Creation Form -->
+	<div id="event-form">
+		<h2>Create Event</h2>
+		<form id="create-event-form">
+			<label for="event-name">Event Name:</label>
+			<input type="text" id="event-name" required>
+			<label for="event-date">Date:</label>
+			<input type="date" id="event-date" required>
+			<label for="event-time">Time:</label>
+			<input type="time" id="event-time" required>
+			<label for="event-location">Location:</label>
+			<input type="text" id="event-location" required>
+			<button type="submit">Create Event</button>
+		</form>
+	</div>
+
+	<!-- Event Listing -->
+	<div id="event-list">
+		<h2>Upcoming Events</h2>
+		<ul id="events"></ul>
+	</div>
+
+	<style>
+		/* General Styles */
+		body {
+			font-family: Arial, sans-serif;
+			background: linear-gradient(to right, #ca00e5, #1b1917);
+			color: #333;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		h1 {
+			text-align: center;
+			color: #bfbfbf;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			color: #9e9d9d;
+		}
+
+		/* Form Styles */
+		#event-form {
+			background: rgba(255, 255, 255, 0.9);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+		}
+
+		form label {
+			display: block;
+			margin: 10px 0 5px;
+		}
+
+		form input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		form button {
+			width: 100%;
+			padding: 10px;
+			background: #ff7e5f;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		form button:hover {
+			background: #feb47b;
+		}
+
+		/* Event List Styles */
+		#event-list {
+			background: rgba(0, 0, 0, 0.9);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		#events {
+			list-style: none;
+			padding: 0;
+		}
+
+		#events li {
+			background: #19a919;
+			padding: 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+	</style>
+	<script src="script.js"></script>
+</body>
+</html>
